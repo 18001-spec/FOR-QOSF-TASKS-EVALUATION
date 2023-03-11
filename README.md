@@ -1,11 +1,11 @@
 # Checking if Four Numbers Represent a Rectangle Using Quantum Computing
-# This code checks if four given numbers represent the sides of a rectangle. The approach used in this code is to convert each number to binary and check if the binary representation of the numbers satisfies the condition of a rectangle.
+# This code checks if four given numbers represent the sides of a rectangle. The approach used in this code is to convert each number to binary and then to reuired qubits and check if the measurement of those qubits satisfies the condition of a rectangle.
 # Requirements
 # Python 3.x
 # Qiskit
 #Usage
 #Clone the repository:
-#git clone https://github.com/18001-spec/for-qosf-task-evaluation.git
+#git clone https://github.com/18001-spec/FOR-QOSF-TASKS-EVALUATION.git
 #Modify the input values num1, num2, num3, and num4 to any four numbers of your choice.
 #Run the code:
 #Copy code
