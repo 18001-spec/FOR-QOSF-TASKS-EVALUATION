@@ -30,9 +30,10 @@
 #References
 #Qiskit Documentation
 # FOR-QOSF-TASKS-EVALUATION
+```python
+from qiskit import QuantumCircuit, Aer, execute, QuantumRegister, ClassicalRegister
 
-    from qiskit import QuantumCircuit, Aer, execute
-    def is_rectangle(num1, num2, num3, num4):
+def is_rectangle(num1, num2, num3, num4):
     # convert numbers to binary
     bin1 = format(num1, 'b')
     bin2 = format(num4, 'b')
@@ -94,15 +95,20 @@
     qc2.measure(qreg, creg)
 
     # execute the circuit for num3 and num4 and print the results
-    backend = Aer.get_backend('qasm_simulator')
     job = execute(qc2, backend, shots=1)
     result = job.result()
     counts = result.get_counts(qc2)
 
     equal_23 = '0'*n in counts
 
+    # check if the numbers represent a rectangle
     if equal_14 and equal_23:
-        print("1")
+        return 1
     else:
-        print("0")
-is_rectangle(5555, 8, 8, 5555) #expected_output is 1
+        return 0
+A= is_rectangle(55, 8, 8, 555)
+print(A) #expected output is 0
+B= is_rectangle(555, 8, 8, 555)
+print(B) #expected output is 1
+C= is_rectangle(55, 55, 55, 55)
+print(C) #expected output is 1
